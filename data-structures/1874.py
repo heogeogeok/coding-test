@@ -1,5 +1,6 @@
 n = int(input())
 sequence = [int(input()) for _ in range(n)]
+
 stack = []
 current = 1
 output = []
