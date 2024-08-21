@@ -14,7 +14,7 @@ for _ in range(T):
                 is_valid = False
                 break
     if is_valid:
-        if len(stack) == 0:
+        if stack:
             print('YES')
         else:
             print('NO')
