@@ -1,7 +1,7 @@
 def solution(n, times):
-    start, end = 1, max(times) * n # 최소 시간 1, 최대 시간은 가장 오래 걸리는 심사관이 모두 처리하는 시간
-    while start <= end:
-        mid = (start + end) // 2
+    low, high = 1, max(times) * n # 최소 시간 1, 최대 시간은 가장 오래 걸리는 심사관이 모두 처리하는 시간
+    while low <= high:
+        mid = (low + high) // 2
         # 심사 받은 사람 
         people = 0
 
@@ -12,7 +12,7 @@ def solution(n, times):
         
         # 모든 사람이 처리될 수 있으면 시간을 줄여본다
         if people >= n:
-            end = mid - 1
+            high = mid - 1
         else:
-            start = mid + 1
-    return start
+            low = mid + 1
+    return low
